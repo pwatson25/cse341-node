@@ -5,11 +5,11 @@ const doc = {
         title: 'Contacts API',
         description: 'Village Lane Publishing Contacts',
     },
-    host: '',
+    host: 'cse341-node-ookv.onrender.com',
     schemes: ['http', 'https']
 };
 
-const outputFile = 'swagger-output.json';
-const endpointsFiles = ['./server.js'];
+const outputFile = './swagger-output.json';
+const endpointsFiles = ['./routes/index.js'];
 
 swaggerAutogen(outputFile, endpointsFiles, doc);
