@@ -51,10 +51,7 @@ const updateContact = async (req, res) => {
         img_url: req.body.img_url
     };
     const response = await mongodb
-        .getDb()
-        .db("cse341-watson")
-        .collection('contacts')
-        .replaceOne({
+        .getDb().db("cse341-watson").collection('contacts').replaceOne({
             _id: userId
         }, contact);
     console.log(response);
